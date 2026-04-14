@@ -1,0 +1,61 @@
+{
+  "name": "venum",
+  "version": "1.0.0",
+  "description": "Tiny tagged unions for TypeScript. Two functions, zero dependencies, full type inference.",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./lib/index.d.ts",
+      "require": "./lib/index.js",
+      "default": "./lib/index.js"
+    }
+  },
+  "files": [
+    "lib/**/*",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "test": "bun test",
+    "typecheck": "tsc --noEmit --strict --esModuleInterop --target ES2015 --module CommonJS --lib ES2018 --skipLibCheck --moduleResolution node src/index.test.ts",
+    "clean": "rm -rf ./lib",
+    "build": "rm -rf ./lib && tsc -p .",
+    "prepublishOnly": "npm run test && npm run typecheck && npm run build",
+    "deploy": "np"
+  },
+  "keywords": [
+    "typescript",
+    "tagged-union",
+    "discriminated-union",
+    "variant",
+    "enum",
+    "pattern-matching",
+    "match",
+    "functional-programming",
+    "type-safe",
+    "union-type",
+    "algebraic-data-types",
+    "adt",
+    "sum-type"
+  ],
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "sideEffects": false,
+  "author": "Francois Vongue",
+  "license": "MIT",
+  "homepage": "https://github.com/FrancoisVongue/venum#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/FrancoisVongue/venum"
+  },
+  "bugs": {
+    "url": "https://github.com/FrancoisVongue/venum/issues"
+  },
+  "devDependencies": {
+    "@types/jest": "^29.5.14",
+    "np": "^10.0.0",
+    "typescript": "^5.8.2"
+  }
+}

@@ -1,0 +1,6 @@
+src/
+node_modules/
+*.test.*
+tsconfig.json
+.gitignore
+DEPLOY.md

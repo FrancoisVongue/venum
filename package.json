@@ -1,6 +1,6 @@
 {
   "name": "venum",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Tiny tagged unions for TypeScript. Two functions, zero dependencies, full type inference.",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
